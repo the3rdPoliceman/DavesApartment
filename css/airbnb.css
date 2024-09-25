@@ -1,4 +1,4 @@
-    @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i");
 @font-face {
   font-family: 'Caveat-VariableFont_wght';
   src: url("../fonts/Caveat-VariableFont_wght.ttf") format("truetype"); }
@@ -10,13 +10,13 @@ html, .root {
 body {
   font-family: Circular, -apple-system, "system-ui", Roboto, "Helvetica Neue", sans-serif;
   font-size: 1rem;
-  line-height: 1.4375em;
+  line-height: 1.7em;
   color: #717171;
   margin: 10px 10px; }
 
 @media (min-width: 600px) {
   body {
-    margin: 50px 50px; } }
+    margin: 20px 50px 50px 50px; } }
 
 .article {
   font-family: Circular, -apple-system, "system-ui", Roboto, "Helvetica Neue", sans-serif;
@@ -32,12 +32,38 @@ script {
 
 .page-title {
   font-family: "Caveat-VariableFont_wght";
-  font-size: 6rem;
   font-weight: normal;
   line-height: 1.01470588em;
   margin-bottom: 0.67647058em;
   color: #f7585b;
-  margin-bottom: 0px; }
+  margin-bottom: 1.5rem;
+  font-size: 6rem; /* Adjusted from 6rem to 3rem */
+}
+
+/* Style changes for h2 headings */
+h2 {
+    font-family: 'Caveat-VariableFont_wght', sans-serif; /* Using Caveat font */
+    color: #f7585b; /* Assuming this is your preferred shade of red */
+    font-size: 2.625rem; /* Adjust size as needed */
+    margin-top: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+@media screen and (max-width: 599px) {
+  .page-title {
+    font-family: "Caveat-VariableFont_wght";
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.01470588em;
+    margin-bottom: 0.67647058em;
+    color: #f7585b;
+    margin-bottom: 0px; } 
+  
+   h2 {
+  	line-height: 1.01470588em;
+  }
+}
+
 
 .cover-title {
   font-family: "Caveat-VariableFont_wght";
@@ -48,16 +74,6 @@ script {
   color: #f7585b;
   font-size: 12rem;
   margin-bottom: 0px; }
-
-@media screen and (max-width: 599px) {
-  .page-title {
-    font-family: "Caveat-VariableFont_wght";
-    font-size: 4rem;
-    font-weight: normal;
-    line-height: 1.01470588em;
-    margin-bottom: 0.67647058em;
-    color: #f7585b;
-    margin-bottom: 0px; } }
 
 .basics-section-title {
   font-family: "Caveat-VariableFont_wght";
@@ -73,13 +89,14 @@ script {
   font-family: "Caveat-VariableFont_wght";
   font-weight: bold;
   color: #f7585b;
-  margin: 30px 0px 0px 0px;
-  font-size: 1.3rem;
+  margin: 30px 10px 5px 0px;
+  font-size: 1.5rem;
+  line-height : 2rem;
   font-weight: 700; }
 
 .basics-section-detail {
   margin: 0px 10px;
-  font-weight: bold; }
+  font-weight: normal; }
 
 .label {
   font-family: "Caveat-VariableFont_wght";
@@ -156,3 +173,118 @@ a:hover {
 .useful-link-url {
   padding: 0 20px 0 20px;
   vertical-align: top; }
+  
+.apartment-info, .documents-guides {
+    display: block; /* Ensure links are listed vertically */
+    margin: 20px 0;
+}
+
+
+
+/* Style changes for apartment content links */
+.apartment-content-link {
+    /* Styles for the div wrapper */
+    margin: 10px 0; /* Spacing between links */
+    font-family: 'Caveat-VariableFont_wght', sans-serif; /* Caveat font for consistency */
+}
+
+.apartment-content-link a {
+    /* Styles specifically for the links */
+    color: #717171; /* Grey color for the text */
+    text-decoration: none; /* Removes underline */
+    display: block; /* Optional: makes the entire area clickable if div is styled as a block */
+}
+
+.apartment-content-link a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+}
+
+.contact {
+    /* Styles for the div wrapper */
+    margin: 10px 0; /* Spacing between links */
+    color: #717171;
+    font-family: 'Caveat-VariableFont_wght', sans-serif; /* Caveat font for consistency */
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.img-full-width {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+}
+
+.img-half-width {
+    width: 100%; /* Full width on mobile */
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .img-half-width {
+        width: 49%; /* Half width on desktops and larger screens */
+        margin-right: 1%; /* Optional spacing between images */
+    }
+}
+
+.entry {
+    margin-bottom: 30px;
+}
+
+.entry img {
+    width: 100%;
+    height: auto;
+}
+
+.entry h2 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Optional: adjust as needed for spacing below */
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background-color: #ddd; /* Light gray color */
+    margin: 30px 0; /* Space around the divider */
+    width: 40%; /* Optional: Control the width of the divider */
+    margin-left: auto; /* Center align the divider */
+    margin-right: auto; /* Center align the divider */
+}
+.home-button {
+    position: fixed;
+    top: 40px; /* Consistent top position for both mobile and desktop */
+    right: -10px; /* Consistent right position for both mobile and desktop */
+    width: 75px; /* Default width for mobile */
+    height: 75px; /* Default height for mobile */
+    background-color: #f7585b; 
+    border-radius: 50%;
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2); /* Enhanced box shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border: 1px solid #ddd;
+    text-decoration: none;
+}
+
+.home-button img {
+    width: 36px; /* Default icon size for mobile */
+    height: 36px; /* Default icon size for mobile */
+}
+
+.home-button:hover {
+    background-color: #d0484b; /* Change background color on hover */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .home-button {
+        width: 100px; /* Double size for desktop */
+        height: 100px; /* Double size for desktop */
+        /* top and right values remain the same for desktop */
+    }
+
+    .home-button img {
+        width: 48px; /* Double icon size for desktop */
+        height: 48px; /* Double icon size for desktop */
+    }
+}
+
